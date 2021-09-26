@@ -14,4 +14,6 @@ $ python video.py
 ```
 
 ### 其他
-参考出处：https://blog.csdn.net/lic1697067085/article/details/104098893
+参考出处：
+https://zhuanlan.zhihu.com/p/44373317?utm_source=wechatMessage_article_bottom
+https://blog.csdn.net/lic1697067085/article/details/104098893

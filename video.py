@@ -7,8 +7,8 @@ symbols = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,
 scale = 4    # 长宽扩大倍数
 border = 1  # 边框宽度
 fnt = ImageFont.truetype('C:\Windows\Fonts\Arial.ttf', int(scale*3))
-intervalPixel = 2     # 间隔多少个像素点来填充，使图片看起来不密集，提高转化时间
-thumbnailMaxSize = 100, 100 # 缩略图最大长宽像素
+intervalPixel = 3     # 间隔多少个像素点来填充，使图片看起来不密集，提高转化时间
+thumbnailMaxSize = 400, 400 # 缩略图最大长宽像素
 
 #生成字符画,在第104行调用！！！！！！
 def asciiConvert(srcDir, targetDir): 
@@ -80,7 +80,7 @@ def videoToAscii(srcFile):
     slice_pic_cmd = 'ffmpeg.exe -i {0} -r 24 ./temp_pic/%06d.jpeg'.format(srcFile) 
     os.system(slice_pic_cmd)
     #生成缩略图 保存到./temp_thum
-    create_thumbnail('./temp_pic', './temp_thum') 
+    createThumbnail('./temp_pic', './temp_thum') 
     #生成字符画 保存到./temp_ascii
     asciiConvert('./temp_thum', './temp_ascii') 
     #合成字符视频
